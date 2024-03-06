@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Send Mail</title>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+
+	<script type="text/javascript">
+		function sendEmail() {
+			Email.send({
+				Host: "smtp.elasticemail.com",
+				Username: "abiasebastian@gmail.com",
+				Password: "C2E09606AB1F7B561A2348493592E93D6F26",
+				To: 'abiasebastian@outlook.com',
+				From: "abiasebastian18@gmail.com",
+				Subject: "Sending Email using javascript",
+				Body: "Well that was easy!!",
+			})
+				.then(function (message) {
+					alert(message)
+				});
+		}
+	</script>
+</head>
+
+<body>
+	<form method="post">
+		<input type="button" value="Send Email"
+			onclick="sendEmail()" />
+	</form>
+</body>
+</html>
