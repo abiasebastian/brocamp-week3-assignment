@@ -5,11 +5,8 @@ console.log(Callback(Arr))
  }
 
 function add(Arr){
-    let sum=0;
-    Arr.forEach(element => {
-        sum+=element;
-    });
-    return sum
+   return Arr.reduce((previous,current)=>previous+current)
 }
+
 
 sum(arr,add)
