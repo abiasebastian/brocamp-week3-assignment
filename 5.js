@@ -1,6 +1,6 @@
 const prompt=require('prompt-sync')()//required prompt-sync module to execute code on Node.js
 
-const marks=parseFloat(prompt('ENTER YOUR MARKS OUT OF 100'))
+const marks=parseFloat(prompt('ENTER YOUR MARKS OUT OF 100 : '))
 if(marks<0||marks>100){
     console.log('INVALID ENTRY')
 }
@@ -8,7 +8,7 @@ else if(marks>90){
     console.log('A')
 }
 else if(marks>80){
-    connsole.log('B')
+    console.log('B')
 }
 else if(marks>70){
     console.log('C')

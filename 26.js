@@ -1,18 +1,21 @@
-prompt = require("prompt-sync")(); //required prompt-sync module to execute code on Node.js
+const prompt = require("prompt-sync")(); // Required prompt-sync module to execute code on Node.js
 
 let input = prompt(`ENTER INPUT : `);
-let inputac=Number(input)
+let inputac = Number(input); // Convert input to a number
+
 let my_string;
-if(inputac==NaN){
-    my_string=input
+
+
+if (isNaN(inputac)) {
+    my_string = input; // If input is not a number, assign it directly
+} else {
+    my_string = inputac; // If input is a number, assign the converted number
 }
-else{
-    my_string=inputac
-}
+
 try {
-  console.log("REVERSED STRING IS " + my_string().split(` `).reverse().join());
+    console.log("REVERSED STRING IS " + my_string.split(` `).reverse().join(' ')); // Join with space as separator
 } catch (error) {
-  console.log("ERROR : " + error.message);
+    console.log("ERROR : " + error.message); // Specify the error message
 } finally {
-  console.log("Type of 'my_string' is " + typeof my_string);
+    console.log("Type of 'my_string' is " + typeof my_string);
 }
